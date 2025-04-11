@@ -1,19 +1,27 @@
-# @babel/runtime
+# @fortawesome/fontawesome-svg-core - SVG with JavaScript version
 
-> babel's modular runtime helpers
+> "I came here to chew bubblegum and install Font Awesome 6 - and I'm all out of bubblegum"
 
-See our website [@babel/runtime](https://babeljs.io/docs/babel-runtime) for more information.
+[![npm](https://img.shields.io/npm/v/@fortawesome/fontawesome-svg-core.svg?style=flat-square)](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core)
 
-## Install
+## Installation
 
-Using npm:
-
-```sh
-npm install --save @babel/runtime
+```
+$ npm i --save @fortawesome/fontawesome-svg-core
 ```
 
-or using yarn:
+Or
 
-```sh
-yarn add @babel/runtime
 ```
+$ yarn add @fortawesome/fontawesome-svg-core
+```
+
+## Documentation
+
+Get started [here](https://docs.fontawesome.com/web/setup/get-started). Continue your journey [here](https://docs.fontawesome.com/web/setup/packages).
+
+Or go straight to the [API documentation](https://docs.fontawesome.com/apis/javascript/get-started).
+
+## Issues and support
+
+Start with [GitHub issues](https://github.com/FortAwesome/Font-Awesome/issues) and ping us on [Twitter](https://twitter.com/fontawesome) if you need to.
