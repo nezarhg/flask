@@ -1,0 +1,53 @@
+/* أنماط صفحة المنشآت */
+.establishments-container {
+  padding: 20px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.table th {
+  background-color: var(--light-color);
+  font-weight: bold;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.btn-group {
+  display: inline-flex;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.pagination .page-link {
+  color: var(--primary-color);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* تنسيق للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .establishments-container {
+    padding: 10px;
+  }
+  
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+  
+  .btn-sm {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+  }
+}

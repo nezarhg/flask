@@ -1,0 +1,227 @@
+/* الأنماط العامة للتطبيق */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --sidebar-width: 250px;
+  --header-height: 60px;
+  --font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f5f5f5;
+  color: #333;
+  direction: rtl;
+}
+
+/* تنسيق الحاوية الرئيسية */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* تنسيق المحتوى الرئيسي */
+.main-content {
+  flex: 1;
+  transition: margin-right 0.3s;
+}
+
+.main-content.sidebar-open {
+  margin-right: var(--sidebar-width);
+}
+
+.main-content.sidebar-closed {
+  margin-right: 0;
+}
+
+/* تنسيق غلاف المحتوى */
+.content-wrapper {
+  padding: 20px;
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* تنسيق البطاقات */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: var(--light-color);
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* تنسيق الأزرار */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1a252f;
+  border-color: #1a252f;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+/* تنسيق الجداول */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table th {
+  background-color: var(--light-color);
+  font-weight: bold;
+}
+
+/* تنسيق النماذج */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* تنسيق مؤشر التحميل */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* تنسيق الإشعارات */
+.alert {
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* تنسيق مساعد الذكاء الاصطناعي */
+.ai-assistant-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.ai-assistant-toggle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ai-assistant-panel {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 350px;
+  height: 450px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-assistant-header {
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-assistant-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.ai-assistant-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  display: flex;
+}
+
+.ai-assistant-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-left: 10px;
+}
+
+.ai-assistant-send {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* تنسيق للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .main-content.sidebar-open {
+    margin-right: 0;
+  }
+  
+  .content-wrapper {
+    padding: 10px;
+  }
+  
+  .ai-assistant-panel {
+    width: 300px;
+  }
+}

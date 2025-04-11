@@ -1,0 +1,162 @@
+/* أنماط صفحة استيراد وتصدير البيانات */
+.data-import-container {
+  padding: 20px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+  background-color: #f8f9fa;
+}
+
+.tab.active {
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.custom-file-upload {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.file-format-hint {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+.selected-file {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.import-instructions, .export-instructions {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.import-instructions h5, .export-instructions h5 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.import-instructions ul, .export-instructions ul {
+  padding-right: 20px;
+}
+
+.import-instructions li, .export-instructions li {
+  margin-bottom: 8px;
+}
+
+.export-buttons {
+  margin-top: 20px;
+}
+
+.import-result, .export-result {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.result-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+}
+
+.result-label {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.result-value {
+  font-weight: bold;
+}
+
+.result-value.success {
+  color: #28a745;
+}
+
+.result-value.info {
+  color: #17a2b8;
+}
+
+.result-value.danger {
+  color: #dc3545;
+}
+
+.errors-container {
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.error-list {
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
+.error-list li {
+  color: #dc3545;
+  margin-bottom: 5px;
+}
+
+/* تنسيق للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .data-import-container {
+    padding: 10px;
+  }
+  
+  .tabs {
+    flex-direction: column;
+    border-bottom: none;
+  }
+  
+  .tab {
+    border-bottom: 1px solid #ddd;
+    border-right: 3px solid transparent;
+  }
+  
+  .tab.active {
+    border-bottom: 1px solid #ddd;
+    border-right: 3px solid var(--primary-color);
+  }
+  
+  .result-summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
